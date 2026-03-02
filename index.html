@@ -5,36 +5,316 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Speedrun Learning</title>
 
-  <link rel="stylesheet" href="style.css?v=20" />
+  <link rel="stylesheet" href="style.css?v=38" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Lottie Files Animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
 
-  <!-- 🔵 LOADING SCREEN OVERLAY -->
-  <div id="loading-screen">
+  <nav class="sr-navbar">
+    <div class="sr-nav-left">
+      <span class="sr-logo">Speedrun Learning</span>
+    </div>
 
-      <!-- Centered typed title -->
-      <div class="typed-wrapper">
-        <span id="typed-title" class="loading-title"></span>
+    <ul class="sr-nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services-blobs">Subjects</a></li>
+      <li><a href="#testimonials-section">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="sr-menu-button" id="srMenuButton" type="button" aria-expanded="false" aria-controls="srMobileMenu">
+      Menu
+    </button>
+    
+    <div class="sr-mobile-menu" id="srMobileMenu">
+      <a href="#hero">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#about">About</a>
+      <a href="#services-blobs">Subjects</a>
+      <a href="#testimonials-section">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <span class="sr-phone">(224) 425-6032</span>
+  </nav>
+
+  <!-- 🔵 LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="typed-wrapper">
+      <span id="typed-title" class="loading-title"></span>
+    </div>
+    <div class="spinner-container"></div>
+  </div>
+
+  <!-- 🔵 BACKGROUND CROSS-FADE -->
+  <div id="background-fade"></div>
+
+  <main id="site">
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero-section">
+
+      <div class="hero-left">
+        <h1 class="hero-title">
+          We help students learn and build <span id="hero-rotate" class="hero-rotate"></span>
+        </h1>
+    
+        <ul class="hero-checklist" aria-label="Key benefits">
+          <li class="hero-check">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span class="check-text">Tutoring for all K-12 math + SAT/ACT math</span>
+          </li>
+        
+          <li class="hero-check">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span class="check-text">Friendly, effective tutors who build real study habits</span>
+          </li>
+        
+          <li class="hero-check">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span class="check-text">Online or In-person tutoring (Los Angeles)</span>
+          </li>
+        </ul>
+
+        <button class="big-button hero-cta-button" onclick="location.href='#contact'">
+          Get Started
+        </button>
+      </div>
+    
+      <div class="hero-right">
+        <lottie-player
+          src="animations/Reading Boy.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay>
+        </lottie-player>
+      </div>
+    
+    </section>
+
+    <!-- ✅ NEW CLEAN MISSION SECTION -->
+    <section id="mission" class="mission-section">
+      <div class="mission-inner">
+        <p class="mission-kicker">Our Approach</p>
+        <h2 class="mission-title">Our Mission</h2>
+      
+        <p class="mission-lead mission-lead-center">
+          Most tutoring helps students get through the next assignment. We focus on what happens after the session ends.
+        </p>
+      
+        <div class="mission-journey" aria-label="Problem, process, and outcome">
+          <article class="journey-step">
+            <div class="journey-step-top">
+              <span class="journey-number">01</span>
+              <span class="journey-label">Problem</span>
+            </div>
+            <h3 class="journey-title">Students are fighting more than the material.</h3>
+            <p class="journey-copy">
+              In a world built around distraction, many students do not lack ability. They lack the focus and stability needed to learn deeply.
+            </p>
+          </article>
+
+          <article class="journey-step">
+            <div class="journey-step-top">
+              <span class="journey-number">02</span>
+              <span class="journey-label">Process</span>
+            </div>
+            <h3 class="journey-title">We build focus, habits, and repeatable systems.</h3>
+            <p class="journey-copy">
+              We go beyond homework help by teaching students how to concentrate, work consistently, and approach learning with structure.
+            </p>
+          </article>
+
+          <article class="journey-step">
+            <div class="journey-step-top">
+              <span class="journey-number">03</span>
+              <span class="journey-label">Outcome</span>
+            </div>
+            <h3 class="journey-title">The goal is independence, not long-term dependence.</h3>
+            <p class="journey-copy">
+              Over time, students become calmer, more capable, and more confident learning on their own long after a single test or unit.
+            </p>
+          </article>
+        </div>
+      
+        <p class="mission-closer">
+          We teach students how to learn so the results last beyond one assignment, one unit, or one test.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT (SECOND) ================= -->
+    <section id="about" class="notebook-wrapper">
+      <div class="notebook-card">
+        <span class="nb-tape tape-left"></span>
+        <span class="nb-tape tape-right"></span>
+
+        <div class="nb-content">
+          <div class="nb-page">
+            <h2>About Us</h2>
+
+            <div class="nb-about-two">
+
+              <!-- === TUTOR 1 === -->
+              <div class="tutor-card">
+                <div class="tutor-photo">
+                  <img src="images/billy.png" alt="Tutor 1 Photo">
+                </div>
+                <div class="tutor-text">
+                  <h3>William Wang</h3>
+                  <p>
+                    I'm a former AP Calculus AB & BC teacher and experienced tutor specializing in high school math and SAT/ACT prep.
+                    After teaching in NYC public charter schools and working with an tutoring company, I am developing a student-first
+                    approach focused on how students learn — skills that they will carry with them far beyond any single subject.
+                  </p>
+                </div>
+              </div>
+
+              <!-- === TUTOR 2 === -->
+              <div class="tutor-card">
+                <div class="tutor-photo">
+                  <img src="images/Leroy.png" alt="Leroy Photo">
+                </div>
+                <div class="tutor-text">
+                  <h3>Leroy Jackson</h3>
+                  <p>
+                    I am a recent graduate from LMU with a BA in Psychology. Over the last few years, I’ve built up experience mentoring/tutoring
+                    with time as a Behavioral Technician, in-school tutor, and the last 3 years as an afterschool tutor.<br><br>
+                    I primarily specialize in teaching Math-related subjects ranging from elementary level (all subjects at this level) up to Algebra 2.
+                    My approach to tutoring is finding ways to connect with my students, utilizing their interests to make our sessions engaging and personable.
+                  </p>
+                </div>
+              </div>
+
+            </div><!-- /nb-about-two -->
+          </div><!-- /nb-page -->
+        </div><!-- /nb-content -->
+      </div><!-- /notebook-card -->
+    </section>
+
+    <section id="services-blobs" class="services-blobs">
+      <h2 class="services-heading">Subjects We Teach:</h2>
+
+      <div class="square subject1">
+        <span></span><span></span><span></span>
+        <div class="content">
+          <h2>Test Prep (SAT & ACT Math)</h2>
+          <p>SAT & ACT math prep with focused practice and strategy.</p>
+        </div>
       </div>
 
-      <!-- 3D spinning loader -->
-      <div class="spinner-container"></div>
+      <div class="square subject2">
+        <span></span><span></span><span></span>
+        <div class="content">
+          <h2>High School Math</h2>
+          <p>Algebra I/II, Geometry, Trigonometry, Pre-Calculus, and AP Calculus AB/BC.</p>
+        </div>
+      </div>
 
-  </div>
+      <div class="square subject3">
+        <span></span><span></span><span></span>
+        <div class="content">
+          <h2>Foundations (Elementary & Middle School)</h2>
+          <p>Arithmetic, fractions, decimals, ratios, and pre-algebra.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- 🔵 MAIN PAGE CONTENT (visible but covered initially) -->
-  <div id="main-content" class="page">
-      <h1>yo yo yo!</h1>
-  </div>
+    <section id="testimonials-section" class="testimonials-section">
+      <h2 class="testimonials-title">What Students & Parents Say</h2>
 
-  <script src="script.js?v=20"></script>
+      <button
+        class="big-button hero-cta-button testimonial-cta"
+        onclick="window.open('https://forms.gle/zXdKJetya8VwZTCp9', '_blank')"
+      >
+        Leave Feedback
+      </button>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "My daughter had fallen far behind in math because her teacher does not explain concepts well, moves too quickly without ensuring that the students understand, and is unhelpful when they have questions. She became so depressed that she stopped going to school for four days, fearing she would fail an upcoming test. I reached out to William, and after just two hours of working with him, she emerged from her room smiling and ready to go to school the next day to take the test. Thank you, William, and God bless you!"
+          </p>
+          <h4 class="testimonial-author">— Edmond, Parent of AP Calculus BC student</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “Math is a subject I haven't taken in over 20yrs, and even at that time I wasn't good at it. Facing an upcoming CBEST test to become a substitute teacher, the math section was the only subject I feared would prevent me from getting this job. William's tutoring session eased my anxiety around this exam by offering clear instruction, and test taking strategies that will, no doubt, help me pass. Thank you for being great at your job William!”
+          </p>
+          <h4 class="testimonial-author">— Todd D, CBEST Math Subject Test student</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            “After just a few lessons William has already helped me understand pre-calculus and calculus topics that used to be confusing to me. Overall he has been very friendly and upbeat and knows how to communicate math in a way that makes harder topics a lot easier to understand. I feel a lot more confident with u-substitution and integration by parts now, and we plan to do more lessons with trigonometric integrals. Highly recommend William's teaching and communication style!"
+          </p>
+          <h4 class="testimonial-author">— Megan, AP Calculus AB student</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+
+      <form action="https://formspree.io/f/mnjqabpa" method="POST" class="contact-form">
+        <label>
+          Your Name
+          <input type="text" name="name" required>
+        </label>
+
+        <label>
+          Email or Phone Number
+          <input type="text" name="contact" autocomplete="email tel" required>
+        </label>
+
+        <label>
+          What are you looking for?
+          <select name="service" required>
+            <option value="" selected disabled>Select a subject or goal</option>
+            <option value="Elementary Math">Elementary Math (Arithmetic, Fractions, Decimals)</option>
+            <option value="Middle School Math">Middle School Math (Pre-Algebra, Ratios, Word Problems)</option>
+            <option value="Algebra I">Algebra I</option>
+            <option value="Geometry">Geometry</option>
+            <option value="Algebra II">Algebra II</option>
+            <option value="Pre-Calculus">Pre-Calculus / Trigonometry</option>
+            <option value="AP Calculus">AP Calculus AB / BC</option>
+            <option value="SAT Math">SAT Math Prep</option>
+            <option value="ACT Math">ACT Math Prep</option>
+            <option value="Not Sure">Not sure — help us choose!</option>
+          </select>
+        </label>
+
+        <label>
+          Your Message (optional)
+          <textarea name="message" rows="6"></textarea>
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="script.js?v=38"></script>
 </body>
 </html>
