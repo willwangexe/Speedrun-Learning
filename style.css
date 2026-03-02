@@ -258,6 +258,16 @@ body.loaded .sr-navbar { transform: translateY(0); }
   height: auto;
 }
 
+.section-seam {
+  position: relative;
+  height: 0;
+  z-index: 820;
+}
+
+.section-seam-mission {
+  pointer-events: none;
+}
+
 .hero-title{
   font-family: "Fraunces", Georgia, serif;
   font-size: clamp(2.5rem, 6vw, 5rem);
@@ -562,7 +572,7 @@ body.loaded .sr-navbar { transform: translateY(0); }
     rgba(18, 40, 90, 0.95)
   );
 
-  padding: 9rem 2rem 5rem 2rem;
+  padding: 10rem 2rem 5rem 2rem;
 
   margin-bottom: 6rem;
 }
@@ -606,6 +616,56 @@ body.loaded .sr-navbar { transform: translateY(0); }
   line-height: 1.55;
   color: rgba(250,245,235,0.92);
   margin-bottom: 1.6rem;
+}
+
+.mission-ornament{
+  position: absolute;
+  top: -2.75rem;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.mission-ornament .cube-container{
+  --cubeScale: 0.58;
+  flex: none;
+  width: 300px;
+  animation: none;
+  filter: drop-shadow(0 28px 60px rgba(5, 15, 35, 0.28));
+  pointer-events: auto;
+}
+
+.mission-ornament .cube div span{
+  background: #e2e8f0;
+  box-shadow: inset 1px 1px 0 #d9e1ea;
+}
+
+.mission-ornament .cube div span:before{
+  background: #b9c4d2;
+  left: -39px;
+  box-shadow: inset 0 0 0 1px #b2bcc9;
+}
+
+.mission-ornament .cube div span:after{
+  background: #f7fafc;
+  top: -39px;
+  box-shadow: inset 0 0 0 1px #eef3f7;
+}
+
+.mission-ornament .cube div span:hover{
+  background: #ef4149;
+  box-shadow: inset 1px 1px 0 #ef4149, 0 0 30px #ef4149;
+}
+
+.mission-ornament .cube div span:hover:before,
+.mission-ornament .cube div span:hover:after{
+  background: #ef4149;
+  box-shadow: inset 0 0 0 1px #ef4149;
 }
 
 .mission-journey{
@@ -704,6 +764,16 @@ body.loaded .sr-navbar { transform: translateY(0); }
 
 /* Responsive */
 @media (max-width: 980px){
+  .mission-ornament{
+    top: -2rem;
+    transform: translateX(-50%);
+  }
+
+  .mission-ornament .cube-container{
+    --cubeScale: 0.45;
+    width: 240px;
+  }
+
   .mission-journey{
     grid-template-columns: 1fr;
     gap: 1.25rem;
