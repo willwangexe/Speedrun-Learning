@@ -74,7 +74,7 @@
 
       <div class="hero-left">
         <h1 class="hero-title">
-          We help students learn and build <span id="hero-rotate" class="hero-rotate"></span>
+          We help students learn and <br class="hero-title-break">build <span id="hero-rotate" class="hero-rotate"></span>
         </h1>
     
         <ul class="hero-checklist" aria-label="Key benefits">
@@ -99,15 +99,20 @@
         </button>
       </div>
     
-      <div class="hero-right">
-        <lottie-player
-          src="animations/Reading Boy.json"
-          background="transparent"
-          speed="1"
-          loop
-          autoplay>
-        </lottie-player>
-      </div>
+	      <div class="hero-right">
+	        <div class="hero-animation-shell" aria-hidden="true">
+	          <span class="hero-anim-orbit hero-anim-orbit-one"></span>
+	          <span class="hero-anim-orbit hero-anim-orbit-two"></span>
+	          <span class="hero-anim-orbit hero-anim-orbit-three"></span>
+	          <lottie-player
+	            src="animations/Reading Boy.json"
+	            background="transparent"
+	            speed="1"
+	            loop
+	            autoplay>
+	          </lottie-player>
+	        </div>
+	      </div>
     
     </section>
 
@@ -275,30 +280,74 @@
     </section>
 
     <section id="services-blobs" class="services-blobs">
-      <h2 class="services-heading">Subjects We Teach:</h2>
-
-      <div class="square subject1">
-        <span></span><span></span><span></span>
-        <div class="content">
-          <h2>Test Prep (SAT & ACT Math)</h2>
-          <p>SAT & ACT math prep with focused practice and strategy.</p>
-        </div>
+      <div class="services-intro">
+        <p class="services-kicker">Subjects We Teach</p>
+        <h2 class="services-heading">Clear math support across every stage of the journey.</h2>
+        <p class="services-lead">
+          We teach all of K-12 math, but most families come to us for support in one of three areas: elementary and middle school math, high school coursework, or SAT / ACT preparation.
+        </p>
       </div>
 
-      <div class="square subject2">
-        <span></span><span></span><span></span>
-        <div class="content">
-          <h2>High School Math</h2>
-          <p>Algebra I/II, Geometry, Trigonometry, Pre-Calculus, and AP Calculus AB/BC.</p>
-        </div>
-      </div>
+      <div class="services-orbit-grid">
+        <article class="subject-orbit subject-foundations">
+          <div class="orbit-shell" aria-hidden="true">
+            <span class="orbit-ring orbit-ring-one"></span>
+            <span class="orbit-ring orbit-ring-two"></span>
+            <span class="orbit-ring orbit-ring-three"></span>
+          </div>
+          <div class="subject-card">
+            <p class="subject-kicker">01 · Foundations</p>
+            <h3>Elementary & Middle School Math</h3>
+            <p class="subject-copy">
+              Support for younger students who need clearer instruction, stronger confidence, and solid math foundations before high school.
+            </p>
+            <ul class="subject-list" aria-label="Elementary and middle school math topics">
+              <li>Arithmetic, fractions, decimals</li>
+              <li>Ratios, word problems, pre-algebra</li>
+              <li>Confidence-building support</li>
+            </ul>
+          </div>
+        </article>
 
-      <div class="square subject3">
-        <span></span><span></span><span></span>
-        <div class="content">
-          <h2>Foundations (Elementary & Middle School)</h2>
-          <p>Arithmetic, fractions, decimals, ratios, and pre-algebra.</p>
-        </div>
+        <article class="subject-orbit subject-high-school">
+          <div class="orbit-shell" aria-hidden="true">
+            <span class="orbit-ring orbit-ring-one"></span>
+            <span class="orbit-ring orbit-ring-two"></span>
+            <span class="orbit-ring orbit-ring-three"></span>
+          </div>
+          <div class="subject-card">
+            <p class="subject-kicker">02 · High School</p>
+            <h3>High School Math</h3>
+            <p class="subject-copy">
+              Clear, thorough instruction across high school coursework, with an emphasis on understanding the material instead of memorizing steps.
+            </p>
+            <ul class="subject-list" aria-label="High school math topics">
+              <li>Algebra I & II</li>
+              <li>Geometry & Trigonometry</li>
+              <li>Pre-Calculus & AP Calculus</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="subject-orbit subject-test-prep">
+          <div class="orbit-shell" aria-hidden="true">
+            <span class="orbit-ring orbit-ring-one"></span>
+            <span class="orbit-ring orbit-ring-two"></span>
+            <span class="orbit-ring orbit-ring-three"></span>
+          </div>
+          <div class="subject-card">
+            <p class="subject-kicker">03 · Test Prep</p>
+            <h3>SAT / ACT Math</h3>
+            <p class="subject-copy">
+              Focused prep for students who need stronger pacing, clearer strategy, and more targeted review ahead of major exams.
+            </p>
+            <ul class="subject-list" aria-label="Test prep topics">
+              <li>SAT math strategy</li>
+              <li>ACT math pacing</li>
+              <li>Targeted practice and review</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
