@@ -204,45 +204,69 @@
     <!-- ================= ABOUT (SECOND) ================= -->
     <section id="about" class="notebook-wrapper">
       <div class="notebook-card">
-        <span class="nb-tape tape-left"></span>
-        <span class="nb-tape tape-right"></span>
-
+        <span class="nb-tape tape-left" aria-hidden="true"></span>
+        <span class="nb-tape tape-right" aria-hidden="true"></span>
+        <div class="nb-scribble" aria-hidden="true">
+          <lottie-player
+            src="animations/Fly only.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay>
+          </lottie-player>
+        </div>
         <div class="nb-content">
           <div class="nb-page">
-            <h2>About Us</h2>
+            <div class="nb-header">
+              <h2>About Us</h2>
+              <div class="nb-meta">
+                <span class="nb-meta-label">Based in Los Angeles</span>
+                <span class="nb-meta-divider" aria-hidden="true"></span>
+                <span class="nb-meta-copy">Online and in-person math tutoring for students and families who want clear instruction and long-term growth.</span>
+              </div>
+            </div>
 
             <div class="nb-about-two">
-
-              <!-- === TUTOR 1 === -->
-              <div class="tutor-card">
+              <article class="tutor-card">
                 <div class="tutor-photo">
-                  <img src="images/billy.png" alt="Tutor 1 Photo">
+                  <img src="images/billy.png" alt="William Wang portrait">
                 </div>
                 <div class="tutor-text">
+                  <div class="tutor-tags">
+                    <span>Founder</span>
+                    <span>AP Calculus</span>
+                    <span>High School Math</span>
+                    <span>SAT/ACT Math</span>
+                  </div>
                   <h3>William Wang</h3>
+                  <p class="tutor-role">Former AP Calculus AB & BC teacher</p>
                   <p>
-                    I'm a former AP Calculus AB & BC teacher and experienced tutor specializing in high school math and SAT/ACT prep.
-                    After teaching in NYC public charter schools and working with an tutoring company, I am developing a student-first
-                    approach focused on how students learn — skills that they will carry with them far beyond any single subject.
+                    I'm a former AP Calculus AB & BC teacher and experienced tutor specializing in high school math and SAT/ACT prep.<br><br>
+                    After teaching in NYC public charter schools and working with an tutoring company, I am developing a student-first approach focused on how students learn — skills that they will carry with them far beyond any single subject.
                   </p>
+                  <p class="tutor-quote">“The goal is not just better grades. It is a student who knows how to learn.”</p>
                 </div>
-              </div>
+              </article>
 
-              <!-- === TUTOR 2 === -->
-              <div class="tutor-card">
+              <article class="tutor-card">
                 <div class="tutor-photo">
-                  <img src="images/Leroy.png" alt="Leroy Photo">
+                  <img src="images/Leroy.png" alt="Leroy Jackson portrait">
                 </div>
                 <div class="tutor-text">
+                  <div class="tutor-tags">
+                    <span>Co-Founder</span>
+                    <span>K-8 Math</span>
+                    <span>Algebra 2</span>
+                  </div>
                   <h3>Leroy Jackson</h3>
+                  <p class="tutor-role">Psychology graduate and experienced youth mentor</p>
                   <p>
-                    I am a recent graduate from LMU with a BA in Psychology. Over the last few years, I’ve built up experience mentoring/tutoring
-                    with time as a Behavioral Technician, in-school tutor, and the last 3 years as an afterschool tutor.<br><br>
-                    I primarily specialize in teaching Math-related subjects ranging from elementary level (all subjects at this level) up to Algebra 2.
-                    My approach to tutoring is finding ways to connect with my students, utilizing their interests to make our sessions engaging and personable.
+                    I am a recent graduate from LMU with a BA in Psychology, with experience as a Behavioral Technician, in-school tutor, and afterschool tutor over the last several years.<br><br>
+                    I specialize in math instruction from elementary subjects through Algebra 2, and I focus on building strong connections with students so sessions feel engaging, personal, and supportive.
                   </p>
+                  <p class="tutor-quote">“Connection comes first. Students learn best when they feel seen, supported, and capable.”</p>
                 </div>
-              </div>
+              </article>
 
             </div><!-- /nb-about-two -->
           </div><!-- /nb-page -->
