@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -53,7 +54,15 @@
       <a href="#contact">Contact</a>
     </div>
 
-    <span class="sr-phone">(224) 425-6032</span>
+    <div class="sr-nav-actions">
+      <a class="sr-phone" href="tel:+12244256032" aria-label="Call (224) 425-6032">
+        <svg class="sr-phone-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18.8 19.5 19.5 0 0 1 5.2 12.8 19.8 19.8 0 0 1 2.08 4.16 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.9a16 16 0 0 0 6.1 6.1l1.45-1.23a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>(224) 425-6032</span>
+      </a>
+      <a class="sr-nav-cta" href="#contact">Get Started</a>
+    </div>
   </nav>
 
   <!-- 🔵 LOADING SCREEN -->
@@ -74,29 +83,81 @@
 
       <div class="hero-left">
         <h1 class="hero-title">
-          We help students learn and <br class="hero-title-break">build <span id="hero-rotate" class="hero-rotate"></span>
+          We help students learn and build <span id="hero-rotate" class="hero-rotate"></span>
         </h1>
     
         <ul class="hero-checklist" aria-label="Key benefits">
           <li class="hero-check">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span class="check-text">Tutoring for all K-12 math + SAT/ACT math</span>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <path d="M7 4l6 6-6 6-1.4-1.4L10.2 10 5.6 5.4z"/>
+              </svg>
+            </span>
+            <span class="check-text">All K-12 Math and SAT/ACT Math Tutoring</span>
           </li>
         
           <li class="hero-check">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span class="check-text">Friendly, effective tutors who build real study habits</span>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <path d="M7 4l6 6-6 6-1.4-1.4L10.2 10 5.6 5.4z"/>
+              </svg>
+            </span>
+            <span class="check-text">Friendly and effective tutors</span>
           </li>
         
           <li class="hero-check">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span class="check-text">Online or In-person tutoring (Los Angeles)</span>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <path d="M7 4l6 6-6 6-1.4-1.4L10.2 10 5.6 5.4z"/>
+              </svg>
+            </span>
+            <span class="check-text">Online or in-person support across Los Angeles</span>
           </li>
         </ul>
 
-        <button class="big-button hero-cta-button" onclick="location.href='#contact'">
-          Get Started
-        </button>
+        <div class="hero-cta-group">
+          <button class="big-button hero-cta-button hero-start-button" onclick="location.href='#contact'">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span>Get Started</span>
+          </button>
+
+          <button class="big-button hero-cta-button hero-video-button" type="button">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M17 10.5V7a1 1 0 0 0-1-1h-3.4l-.7-1.2A1 1 0 0 0 11.03 4H8a2 2 0 0 0-2 2v1H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-3.5l3.3 2.2A1 1 0 0 0 23 14.86V9.14a1 1 0 0 0-1.7-.84L17 10.5zM9.5 10a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span>Watch our Video</span>
+          </button>
+        </div>
       </div>
     
 	      <div class="hero-right">
@@ -281,8 +342,8 @@
 
     <section id="services-blobs" class="services-blobs">
       <div class="services-intro">
-        <p class="services-kicker">Subjects We Teach</p>
-        <h2 class="services-heading">Clear math support across every stage of the journey.</h2>
+        <p class="services-kicker">K-12 Math + SAT/ACT</p>
+        <h2 class="services-heading">Subjects We Teach</h2>
         <p class="services-lead">
           We teach all of K-12 math, but most families come to us for support in one of three areas: elementary and middle school math, high school coursework, or SAT / ACT preparation.
         </p>
@@ -358,7 +419,24 @@
         class="big-button hero-cta-button testimonial-cta"
         onclick="window.open('https://forms.gle/zXdKJetya8VwZTCp9', '_blank')"
       >
-        Leave Feedback
+        <div class="svg-wrapper-1">
+          <div class="svg-wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                fill="currentColor"
+                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <span>Leave Feedback</span>
       </button>
 
       <div class="testimonials-grid">
