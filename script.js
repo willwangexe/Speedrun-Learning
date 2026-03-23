@@ -53,45 +53,77 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 1250);
 
   // === Hero Rotating Word (typed-in) ===
-  const heroRotate = document.getElementById("hero-rotate");
+  const heroRotates = [
+    document.getElementById("hero-rotate"),
+    document.getElementById("hero-rotate-mobile"),
+  ].filter(Boolean);
 
-  if (heroRotate) {
+  if (heroRotates.length > 0) {
+    const heroRotateSlots = heroRotates.map((element) => element.parentElement).filter(Boolean);
     const words = ["systems", "focus", "consistency", "independence"];
-    let i = 0;
-
     const charDelay = 75;   // typing speed (ms per character)
     const holdTime = 3750;  // how long the word stays visible
     const blankPause = 350; // pause with empty space between words
     const outTime = 400;    // must match your CSS .is-swapping transition
+    let i = 0;
+    let rotateIntervalId = null;
+    let swapTimeoutId = null;
+    let blankTimeoutId = null;
 
     function renderWord(word) {
-      heroRotate.innerHTML = "";
-      [...word].forEach((ch, idx) => {
-        const span = document.createElement("span");
-        span.className = "char";
-        span.textContent = ch === " " ? "\u00A0" : ch;
-        span.style.animationDelay = `${idx * charDelay}ms`;
-        heroRotate.appendChild(span);
+      heroRotates.forEach((heroRotate) => {
+        heroRotate.innerHTML = "";
+        [...word].forEach((ch, idx) => {
+          const span = document.createElement("span");
+          span.className = "char";
+          span.textContent = ch === " " ? "\u00A0" : ch;
+          span.style.animationDelay = `${idx * charDelay}ms`;
+          heroRotate.appendChild(span);
+        });
       });
     }
 
-    renderWord(words[i]);
+    function clearRotationTimers() {
+      if (rotateIntervalId) {
+        clearInterval(rotateIntervalId);
+        rotateIntervalId = null;
+      }
+      if (swapTimeoutId) {
+        clearTimeout(swapTimeoutId);
+        swapTimeoutId = null;
+      }
+      if (blankTimeoutId) {
+        clearTimeout(blankTimeoutId);
+        blankTimeoutId = null;
+      }
+    }
 
-    setInterval(() => {
-      heroRotate.classList.add("is-swapping");
+    function startDesktopRotation() {
+      clearRotationTimers();
+      heroRotates.forEach((heroRotate) => heroRotate.classList.remove("is-swapping"));
+      renderWord(words[i]);
 
-      setTimeout(() => {
-        heroRotate.innerHTML = "";
+      rotateIntervalId = setInterval(() => {
+        heroRotates.forEach((heroRotate) => heroRotate.classList.add("is-swapping"));
 
-        setTimeout(() => {
-          i = (i + 1) % words.length;
-          heroRotate.classList.remove("is-swapping");
-          renderWord(words[i]);
-        }, blankPause);
+        swapTimeoutId = setTimeout(() => {
+          heroRotates.forEach((heroRotate) => {
+            heroRotate.innerHTML = "";
+          });
 
-      }, outTime);
+          blankTimeoutId = setTimeout(() => {
+            i = (i + 1) % words.length;
+            heroRotates.forEach((heroRotate) => heroRotate.classList.remove("is-swapping"));
+            renderWord(words[i]);
+          }, blankPause);
+        }, outTime);
+      }, holdTime);
+    }
 
-    }, holdTime);
+    heroRotateSlots.forEach((slot) => {
+      slot.style.minWidth = "10.5ch";
+    });
+    startDesktopRotation();
   }
 
   // === Mobile Menu Toggle ===
